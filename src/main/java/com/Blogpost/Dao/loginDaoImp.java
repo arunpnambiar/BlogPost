@@ -1,5 +1,8 @@
 package com.Blogpost.Dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.Blogpost.POJO.user;
@@ -17,6 +20,9 @@ public class loginDaoImp implements loginDao {
 
 	@Override
 	public boolean register(user user) {
+		List<user> list =  new ArrayList<user>();
+		list.add(user);
+		System.out.print(list);
 		return true;
 	}
 
