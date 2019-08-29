@@ -7,6 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<center>
+		<h2>Signup Details</h2>
+		<form action="register">
+			<br />Name:<input type="text" name="name"> <br /> 
+			Email:<input type="text" name="email"> <br />Password:<input
+				type="password" name="password"> <br /> <input
+				type="submit" value="Submit">
+		</form>
+	</center>
 </body>
 </html>
