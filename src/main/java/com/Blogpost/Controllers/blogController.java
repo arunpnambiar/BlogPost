@@ -16,13 +16,14 @@ public class blogController {
 	@Autowired
 	blogService service;
 
-	@PostMapping
+	@PostMapping("/addBlog")
 	public ModelAndView saveBlog(blog blog) {
 		ModelAndView mav = new ModelAndView("blog");
 		boolean isSuccess = service.saveBlog(blog);
 		if (isSuccess) {
 			System.out.print(blog.toString());
 			List<blog> blogData = service.getUserBlog(blog.getUserid());
+			System.out.println(blogData);
 			mav = new ModelAndView("/blog");
 			mav.addObject("Bloglist", blogData);
 
